@@ -7,8 +7,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    
+    <main>
+        <h1>Pokémon Search App</h1>
+        <div class="box">
+            <h4 style="color: black">Search for Pokémon Name or ID:</h4>
+            <input type="text" name="" id="search-input">
+            <button id="search-button"> Search </button>
+            <br>
+            <div id="content">
+                <div id="contentUpper">
+                    <section id="name-id-h-w">
+                        <p id="pokemon-name">PIKACHU </p>
+                        <p id="pokemon-id"> #25</p>
+                        <p id="height">Height: 4</p>
+                        <p id="weight"> Weight: 60</p>
+                    </section>
+                    <section id="pic">
+                        <img style="height: 150px;" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="">
+                    </section>
+                    <section>
+                        <div id="types">
+                            <div style="height: 25px; width: 80px; background-color:chartreuse; border-radius: 5px; margin: 8px; padding: 4px;"> Ice </div>
+                        </div>
+                    </section>
+                </div>
+                <br>
+                <div id="containerLower">
+                    <div id="info">
+                        <div class="left"> <h3>Base</h3> </div>
+                        <div class="right"> <h3>Stats</h3> </div>
+                    </div>
+                    <div id="info">
+                        <div class="left"> <p>HP:</p> </div>
+                        <div class="right" id="hp"></div>
+                    </div>
+                    <div id="info">
+                        <div class="left"> <p>Attak:</p> </div>
+                        <div class="right" id="attack"></div>
+                    </div>
+                    <div id="info">
+                        <div class="left"><p>Defense:</p></div>
+                        <div class="right" id="defense"></div>
+                    </div>
+                    <div id="info">
+                        <div class="left"> <p> Sp. Attack: </div>
+                        <div class="right" id="special-attack"></div>
+                    </div>
+                    <div id="info">
+                        <div class="left"><p>Sp Defense:</p></div>
+                        <div class="right" id="special-defense"></div>
+                    </div>
+                    <div id="info">
+                        <div class="left"><p>Speed:</p></div>
+                        <div class="right" id="speed"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
     <script src="script.js"></script>
 </body>
