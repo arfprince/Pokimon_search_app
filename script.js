@@ -28,6 +28,7 @@ async function getData(poki) {
         console.error();
     }
 }
+
 function randerPokimonInfo(data){
     pokemonName.innerText=data.name.toUpperCase();
     pokemonId.innerText=`#${data.id}`;
