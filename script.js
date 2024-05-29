@@ -35,11 +35,10 @@ function randerPokimonInfo(data){
     pokemonHeight.innerText=`Height: ${data.height}`;
     for(let i=0;i<data.types.length;i++){
         let span=document.createElement("span");
-        span.innerHTML=`<div style="height: 25px; width: 80px; background-color: crimson; border-radius: 5px; margin: 4px; padding: 4px;"> ${data.types[i].type.name} </div>`;
+        span.innerHTML=`<div id="type" style="height: 25px; width: 80px; background-color: crimson; border-radius: 5px; margin: 4px; padding: 4px;"> ${data.types[i].type.name.toUpperCase()} </div>`;
         pokemonPowerTypes.appendChild(span);
     }
-
-    pokemonPic.src=data.sprites.front_default;
+    pokemonPic.innerHTML=`<img id="sprite" style="height: 150px;" src="${data.sprites.front_default}">`;
 
     for(let i=0;i<data.stats.length;i++){
         if(data.stats[i].stat.name==="hp"){
@@ -65,9 +64,11 @@ function randerPokimonInfo(data){
 
 button.addEventListener("click", async ()=>{
     pokemonPowerTypes.innerHTML="";
+    pokemonPic.innerHTML="";
     let poki=input.value;
     if(poki){
-        const data = await getData(poki);
+        console.log(typeof(poki));
+        const data = await getData(poki.toLowerCase());
         randerPokimonInfo(data);
     }
     else{
