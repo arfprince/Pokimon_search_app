@@ -35,7 +35,7 @@ function randerPokimonInfo(data){
     pokemonHeight.innerText=`Height: ${data.height}`;
     for(let i=0;i<data.types.length;i++){
         let span=document.createElement("span");
-        span.innerHTML=`<div id="type" style="height: 25px; width: 80px; background-color: crimson; border-radius: 5px; margin: 4px; padding: 4px;"> ${data.types[i].type.name.toUpperCase()} </div>`;
+        span.innerHTML=`<div id="type" style="height: 25px; width: 90px; background-color: crimson; border-radius: 5px; margin: 4px; padding: 4px;"> ${data.types[i].type.name.toUpperCase()} </div>`;
         pokemonPowerTypes.appendChild(span);
     }
     pokemonPic.innerHTML=`<img id="sprite" style="height: 150px;" src="${data.sprites.front_default}">`;
